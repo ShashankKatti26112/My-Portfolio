@@ -1,0 +1,32 @@
+# Site Configuration for Shashank Katti's Portfolio
+
+# 1. Base Settings
+title: Shashank Katti
+email: your.email@example.com # Replace with your actual email
+description: >-
+  Full Stack Developer | AI/ML & Cyber Security Specialist. 
+  Showcasing projects and expertise in full-stack development, machine learning, 
+  and defensive security systems.
+baseurl: "" # The subpath of your site, e.g. /blog
+url: "" # The base hostname & protocol for your site
+
+# 2. Theme Settings (Using Minima - a clean, professional alternative)
+remote_theme: "jekyll/minima@v2.5.1"
+minima:
+  date_format: "%b %-d, %Y" # Example date format
+  skin: "classic" # Use "dark" for a technical dark mode look if preferred
+
+# 3. Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-seo-tag # Important for search engine optimization
+domain: my-site.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://my-site.github.io  # the base hostname and protocol for your site, e.g. http://example.com
+baseurl: /ShashankKatti26112/      # place folder name if the site is served in a subfolder
+
+# 4. Social Links (Uncomment and replace with your actual usernames)
+# github_username:  Shashank26112 # Replace with your GitHub username
+# linkedin_username: shashankkatti # Replace with your LinkedIn username
+# twitter_username: your_twitter_handle # Replace with your Twitter handle
