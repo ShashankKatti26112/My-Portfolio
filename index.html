@@ -1,23 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shashank Katti - Full Stack & ML Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Tailwind -->
+    <title>Shashank Katti - Full Stack & ML Portfolio</title>
+    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <!-- Configure Tailwind for a dark, technical theme -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'primary-dark': '#0f172a',
-                        'secondary-card': '#1f2937',
-                        'accent-indigo': '#4f46e5',
-                        'text-light': '#f3f4f6',
-                        'text-muted': '#9ca3af',
+                        'primary-dark': '#0f172a', // Slate 900
+                        'secondary-card': '#1f2937', // Gray 800
+                        'accent-indigo': '#4f46e5', // Indigo 600
+                        'text-light': '#f3f4f6', // Gray 100
+                        'text-muted': '#9ca3af', // Gray 400
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -26,7 +26,6 @@
             }
         }
     </script>
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
@@ -41,174 +40,196 @@
         }
         .card-item:hover {
             box-shadow: 0 0 0 3px #4f46e5;
-            transform: translateY(-4px);
+            transform: translateY(-2px);
         }
     </style>
 </head>
 
 <body class="bg-primary-dark text-text-light antialiased">
 
-<!-- ================= HEADER ================= -->
-<header class="sticky top-0 z-50 bg-secondary-card shadow-xl border-b border-gray-700">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#hero" class="text-2xl font-bold text-accent-indigo">Shashank Katti</a>
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-10 bg-secondary-card/95 backdrop-blur-sm shadow-xl border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-accent-indigo">Shashank Katti</a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#experience" class="text-text-light hover:text-accent-indigo transition duration-150">Experience</a>
+                <a href="#projects" class="text-text-light hover:text-accent-indigo transition duration-150">Projects</a>
+                <a href="#education" class="text-text-light hover:text-accent-indigo transition duration-150">Education</a>
+                <a href="#certifications" class="text-text-light hover:text-accent-indigo transition duration-150">Certifications</a>
+                <a href="https://shashankkatti26112.github.io/My-Portfolio/">Visit My Portfolio </a>
+                <a href="https://quick-cart-beta-bice.vercel.app/">View QuickCart Project </a>   Visit My Portfolio </a>
 
-        <nav class="hidden md:flex space-x-6">
-            <a href="#experience" class="hover:text-accent-indigo">Experience</a>
-            <a href="#projects" class="hover:text-accent-indigo">Projects</a>
-            <a href="#education" class="hover:text-accent-indigo">Education</a>
-            <a href="#certifications" class="hover:text-accent-indigo">Certifications</a>
-        </nav>
 
-        <!-- Mobile Button -->
-        <button id="menu-btn" class="md:hidden">
-            ☰
-        </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-secondary-card px-4 pb-4 space-y-2">
-        <a href="#experience" class="block">Experience</a>
-        <a href="#projects" class="block">Projects</a>
-        <a href="#education" class="block">Education</a>
-        <a href="#certifications" class="block">Certifications</a>
-    </div>
-</header>
-
-<!-- ================= MAIN ================= -->
-<main class="max-w-7xl mx-auto px-4 py-12">
-
-<!-- HERO -->
-<section id="hero" class="text-center py-16">
-    <div class="mx-auto w-32 h-32 bg-secondary-card p-1 rounded-full border-4 border-accent-indigo flex items-center justify-center overflow-hidden">
-        <img src="profile.jpg" alt="Shashank Katti" class="rounded-full w-full h-full object-cover">
-    </div>
-
-    <h1 class="text-5xl font-extrabold mt-6">Shashank Katti</h1>
-    <p class="text-xl text-text-muted mt-4">
-        Full Stack Developer | AI/ML & Cyber Security Specialist
-    </p>
-
-    <!-- LinkedIn -->
-    <div class="mt-8">
-        <a href="https://www.linkedin.com/in/shashankkatti20/" target="_blank"
-           class="bg-accent-indigo px-8 py-3 rounded-full font-semibold hover:bg-indigo-700 transition">
-            View LinkedIn Profile
-        </a>
-    </div>
-
-    <!-- NEW LINKS ADDED CLEANLY -->
-    <div class="mt-6 flex flex-col sm:flex-row justify-center gap-4">
-        <a href="https://shashankkatti26112.github.io/My-Portfolio/" target="_blank"
-           class="bg-gray-700 px-6 py-2 rounded-full hover:bg-gray-600 transition">
-            Visit My Portfolio
-        </a>
-
-        <a href="https://quick-cart-beta-bice.vercel.app/" target="_blank"
-           class="bg-accent-indigo px-6 py-2 rounded-full hover:bg-indigo-700 transition">
-            View QuickCart Project
-        </a>
-    </div>
-</section>
-
-<hr class="border-gray-700 my-12">
-
-<!-- EXPERIENCE -->
-<section id="experience" class="py-10">
-    <h2 class="text-3xl font-bold mb-8 section-header text-accent-indigo">Experience</h2>
-
-    <div class="space-y-6">
-
-        <div class="card-item bg-secondary-card p-6 rounded-xl">
-            <h3 class="text-xl font-semibold">Machine Learning Intern</h3>
-            <p class="text-text-muted">TDS Avenue Code Forge | Aug 2024 - Sep 2024</p>
-            <ul class="list-disc list-inside mt-2 text-text-muted">
-                <li>Worked on ML workflows and model optimization.</li>
-                <li>Applied Python for advanced ML tasks.</li>
-            </ul>
+            </nav>
+            <!-- Mobile Menu Placeholder -->
+            <button class="md:hidden text-text-light">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+            </button>
         </div>
+    </header>
 
-        <div class="card-item bg-secondary-card p-6 rounded-xl">
-            <h3 class="text-xl font-semibold">Full Stack Developer Intern</h3>
-            <p class="text-text-muted">Pratinik Infotech | May 2024 - Jul 2024</p>
-            <ul class="list-disc list-inside mt-2 text-text-muted">
-                <li>Built MERN stack applications from scratch.</li>
-                <li>Designed responsive UI & backend APIs.</li>
-            </ul>
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Hero Section -->
+        <section id="hero" class="text-center py-16">
+         <div class="mx-auto w-32 h-32 bg-secondary-card p-1 rounded-full mb-4 border-4 border-accent-indigo flex items-center justify-center overflow-hidden">
+            <!-- IMPORTANT: Ensure you upload 'profile.jpg' to your GitHub repo root. -->
+            <!-- The image source has been updated to your local file. -->
+            <img src="profile.jpg" alt="Shashank Katti Profile Picture" class="rounded-full w-full h-full object-cover">
+         </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project Item 1: Zero Day Attack -->
+                <div class="card-item bg-secondary-card p-6 rounded-xl shadow-lg flex flex-col h-full">
+                    <h3 class="text-xl font-semibold text-text-light mb-2">Zero Day Attack</h3>
+                    <p class="text-text-muted mb-4">Focus on demonstrating vulnerability exploitation and defense mechanisms.</p>
+                    <div class="mt-auto flex flex-wrap gap-2">
+                        <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Cybersecurity</span>
+                        <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Threat Modeling</span>
+                    </div>
+                </div>
+
+                <!-- Project Item 2: Network Intrusion Detection System -->
+                <div class="card-item bg-secondary-card p-6 rounded-xl shadow-lg flex flex-col h-full">
+                    <h3 class="text-xl font-semibold text-text-light mb-2">Network Intrusion Detection System</h3>
+                    <p class="text-text-muted mb-4">Developed a system to analyze network traffic in real-time to detect and alert suspicious activities.</p>
+                    <div class="mt-auto flex flex-wrap gap-2">
+                        <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Networking</span>
+                        <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Python</span>
+                    </div>
+                </div>
+                
+                <!-- Project Item 3: Parallel Processing Composite Component -->
+                <div class="card-item bg-secondary-card p-6 rounded-xl shadow-lg flex flex-col h-full">
+                    <h3 class="text-xl font-semibold text-text-light mb-2">Parallel Processing Component</h3>
+                    <p class="text-text-muted mb-4">Focus on performance optimization using parallel processing techniques for complex applications.</p>
+                    <div class="mt-auto flex flex-wrap gap-2">
+                        <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Computer Science</span>
+                        <span class="bg-gray-700 text-gray-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Optimization</span>
+                    </div>
+                    
+                    <!-- Project Item 4: QuickCart -->
+                    <div class="card-item bg-secondary-card p-6 rounded-xl shadow-lg flex flex-col h-full">
+                        <h3 class="text-xl font-semibold text-text-light mb-2">QuickCart - E-Commerce Platform</h3>
+                        <p class="text-text-muted mb-4">A responsive e-commerce web application with dynamic cart functionality and modern UI</p>
+                        <div class="mt-auto">
+                            <a href="https://quick-cart-beta-bice.vercel.app/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="inline-block bg-accent-indigo text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+                                View Live Project
+                            </a>
+                        </div>
+                 <!-- Project Item 5: My-Portfolio -->
+                    <div class="card-item bg-secondary-card p-6 rounded-xl shadow-lg flex flex-col h-full">
+                        <h3 class="text-xl font-semibold text-text-light mb-2">My-Portfolio</h3>
+                        <p class="text-text-muted mb-4">• Built using HTML, CSS, and JavaScript with smooth navigation and interactive UI</p>
+                        <div class="mt-auto">
+                            <a href="https://shashankkatti26112.github.io/My-Portfolio/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="inline-block bg-accent-indigo text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+                                View My-Portfolio
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separator -->
+        <hr class="border-gray-700 my-10">
+
+        <!-- Education Section -->
+        <section id="education" class="py-10">
+            <h2 class="text-4xl font-bold mb-8 pb-2 section-header text-accent-indigo">Education</h2>
+            <div class="space-y-6">
+                <!-- Education 1: MCA -->
+                <div class="card-item bg-secondary-card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-text-light">Master of Computer Applications (MCA)</h3>
+                    <p class="text-lg text-text-muted">BMS Institute of Technology and Management</p>
+                    <p class="text-sm text-text-muted mt-1">Feb 2023 - May 2025 | Grade: 7.16(First class with distinction A+)</p>
+                </div>
+                <!-- Education 2: BSc -->
+                <div class="card-item bg-secondary-card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-text-light">Bachelor of Science (BSc), Computer Science</h3>
+                    <p class="text-lg text-text-muted">KLE Technological University - Hubballi (India)</p>
+                    <p class="text-sm text-text-muted mt-1">Jun 2019 - Aug 2022 | Grade: 7.15 (First class with distinction A+)</p>
+                </div>
+            </div>
+        </section>
+         <!-- Certifications Section -->
+        <section id="certifications" class="py-10">
+            <h2 class="text-4xl font-bold mb-8 pb-2 section-header text-accent-indigo">Certifications (33+)</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Certification 1: AWS Certified Machine Learning - Specialty -->
+                <div class="card-item bg-secondary-card p-4 rounded-xl">
+                    <h3 class="text-lg font-semibold text-accent-indigo">AWS Certified Machine Learning - Specialty</h3>
+                    <p class="text-text-muted">Amazon Web Services (AWS)</p>
+                    <p class="text-xs text-text-muted mt-1">Issued Jun 2025</p>
+                </div>
+
+                <!-- Certification 2: Introduction to Data Science -->
+                <div class="card-item bg-secondary-card p-4 rounded-xl">
+                    <h3 class="text-lg font-semibold text-accent-indigo">Introduction to Data Science</h3>
+                    <p class="text-text-muted">Cisco</p>
+                    <p class="text-xs text-text-muted mt-1">Issued Jul 2025</p>
+                </div>
+                
+                <!-- Certification 3: Full Stack Developer Intern -->
+                <div class="card-item bg-secondary-card p-4 rounded-xl">
+                    <h3 class="text-lg font-semibold text-accent-indigo">Java</h3>
+                    <p class="text-text-muted">Udemy</p>
+                    <p class="text-xs text-text-muted mt-1">Issued May 2024</p>
+                </div>
+                
+                <!-- Certification 4: Google Cloud Certified Professional Cloud Architect -->
+                <div class="card-item bg-secondary-card p-4 rounded-xl">
+                    <h3 class="text-lg font-semibold text-accent-indigo">Google Cloud Certified Professional Cloud Architect</h3>
+                    <p class="text-text-muted">Coursera</p>
+                    <p class="text-xs text-text-muted mt-1">Issued Jun 2024</p>
+                </div>
+
+                <!-- Certification 5: Introduction to Generative AI -->
+                <div class="card-item bg-secondary-card p-4 rounded-xl">
+                    <h3 class="text-lg font-semibold text-accent-indigo">Introduction to Generative AI</h3>
+                    <p class="text-text-muted">Google</p>
+                    <p class="text-xs text-text-muted mt-1">Issued May 2025</p>
+                </div>
+                
+                <!-- Certification 6: CSX Cybersecurity Fundamentals Certificate (CSXF) -->
+                <div class="card-item bg-secondary-card p-4 rounded-xl">
+                    <h3 class="text-lg font-semibold text-accent-indigo">CSX Cybersecurity Fundamentals Certificate (CSXF)</h3>
+                    <p class="text-text-muted">GIT IT ACADEMY</p>
+                    <p class="text-xs text-text-muted mt-1">Issued Dec 2023</p>
+                </div>
+                
+                <!-- Placeholder for remaining 27+ certificates to keep the file concise but accurate -->
+                <div class="card-item bg-secondary-card p-4 rounded-xl col-span-full text-center">
+                    <p class="text-lg font-semibold text-text-light">And 27+ More Certifications...</p>
+                    <a href="https://www.linkedin.com/in/shashankkatti20/details/certifications/" target="_blank" rel="noopener noreferrer" class="text-accent-indigo hover:text-indigo-400 mt-2 inline-block">View all on LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-card mt-10 py-6 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-text-muted">
+            <p>&copy; 2025 Shashank Katti</p>
         </div>
-
-    </div>
-</section>
-
-<hr class="border-gray-700 my-12">
-
-<!-- PROJECTS -->
-<section id="projects" class="py-10">
-    <h2 class="text-3xl font-bold mb-8 section-header text-accent-indigo">Projects</h2>
-
-    <div class="grid md:grid-cols-2 gap-6">
-
-        <div class="card-item bg-secondary-card p-6 rounded-xl">
-            <h3 class="text-xl font-semibold">Network Intrusion Detection System</h3>
-            <p class="text-text-muted mt-2">
-                Real-time network traffic monitoring system using Python.
-            </p>
-        </div>
-
-        <div class="card-item bg-secondary-card p-6 rounded-xl">
-            <h3 class="text-xl font-semibold">Zero Day Attack Simulation</h3>
-            <p class="text-text-muted mt-2">
-                Demonstrated vulnerability exploitation & defensive mechanisms.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<hr class="border-gray-700 my-12">
-
-<!-- EDUCATION -->
-<section id="education" class="py-10">
-    <h2 class="text-3xl font-bold mb-8 section-header text-accent-indigo">Education</h2>
-
-    <div class="card-item bg-secondary-card p-6 rounded-xl">
-        <h3 class="text-xl font-semibold">Master of Computer Applications (MCA)</h3>
-        <p class="text-text-muted">
-            BMS Institute of Technology and Management | 2023 - 2025
-        </p>
-    </div>
-</section>
-
-<hr class="border-gray-700 my-12">
-
-<!-- CERTIFICATIONS -->
-<section id="certifications" class="py-10">
-    <h2 class="text-3xl font-bold mb-8 section-header text-accent-indigo">Certifications</h2>
-
-    <div class="card-item bg-secondary-card p-6 rounded-xl">
-        <h3 class="text-lg font-semibold text-accent-indigo">
-            AWS Certified Machine Learning - Specialty
-        </h3>
-        <p class="text-text-muted">Issued 2025</p>
-    </div>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="bg-secondary-card py-6 border-t border-gray-700 text-center text-text-muted">
-    © 2025 Shashank Katti
-</footer>
-
-<!-- MOBILE MENU SCRIPT -->
-<script>
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("mobile-menu");
-
-    btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-    });
-</script>
+    </footer>
 
 </body>
-</html></html>
+</html>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+    btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+  </script>
+</body>
+
+</html>
